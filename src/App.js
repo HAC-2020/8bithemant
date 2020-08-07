@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
 import "./App.css";
-// import CovidApp from "./components/CovidApp";
+import { Route, Switch } from "react-router-dom";
+import Paper from './components/Paper'
+import HomeApp from './screens/HomeApp'
 
 
 
@@ -12,11 +13,34 @@ class App extends Component {
 
     render() {
       return (
-        <>
-        Hii from react
-        </>
+        <Paper >
+            <Switch>
+              <Route 
+                exact
+                path="/"
+                render={()=>(
+                  <HomeApp
+                  />
+                )} />
+
+
+
+
+            </Switch>
+
+
+        </Paper>
+
+
+
+
+
+
+
       )
    
    
     } 
   }
+
+export default App;
