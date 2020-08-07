@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Paper from './components/Paper'
 import HomeApp from './screens/HomeApp'
 import Symptoms from "./screens/Symptoms";
+import Help from "./screens/Help";
 
 
 
@@ -28,7 +29,11 @@ class App extends Component {
                 path="/symptoms"
                 render={() => <Symptoms />}
                 />
-
+                <Route
+                exact
+                path="/help"
+                render={()=> <Help />}
+                />
 
 
 
