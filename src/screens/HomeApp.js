@@ -225,7 +225,7 @@ class HomeApp extends Component {
             </label>
           </div>
           </div>
-          <div>
+        <div>
           <Overview
             // isDarkMode={isDarkMode}
             data={this.state.todayData}
