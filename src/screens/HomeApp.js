@@ -221,7 +221,7 @@ class HomeApp extends Component {
               <span className="slider round"></span>
             </label>
           </div>
-
+          </div>
           <div>
           <Overview
             // isDarkMode={isDarkMode}
@@ -229,7 +229,7 @@ class HomeApp extends Component {
             loadingStatus={this.loadingStatus}
           />
         </div>
-               </div>
+        
 
               
 
