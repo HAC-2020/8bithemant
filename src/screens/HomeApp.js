@@ -229,6 +229,14 @@ class HomeApp extends Component {
             loadingStatus={this.loadingStatus}
           />
         </div>
+
+
+        <div className={classes.content}>
+
+
+
+            
+        </div>
         
 
               
