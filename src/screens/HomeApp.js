@@ -12,6 +12,9 @@ import styles from "../styles/HomeAppStyles"
 import { formatDistance } from "date-fns";
 import { withStyles } from "@material-ui/styles";
 import Overview from '../components/Overview'
+import MapSection from '../components/MapSection'
+import Barchart from "../components/Barchart";
+import DisplayTable from "../components/DisplayTable"
 
 
 
@@ -232,15 +235,97 @@ class HomeApp extends Component {
 
 
         <div className={classes.content}>
+        <div className={classes.contentArea}>
+            <div className={classes.mapArea}>
+              <MapSection
+                data={data}
+                mapData={mapData}
+                // isDarkMode={isDarkMode}
+              />
+            </div>
+          </div>
+
+          <div className={classes.chartArea}>
+          <div className={classes.tinyChartArea}>
+          <div className={classes.tinyChart}>
+                <div
+                  className={classes.tinych}
+                  style={{ background: "rgba(249, 52, 94,.1)" }}
+                >
+                  <h3 style={{ color: colors.red }}>confirmed</h3>
+                  <Barchart
+                    data={this.state.casesTimeline}
+                    isLoading={this.state.isLoading}
+                    dataKey="totalconfirmed"
+                    stroke={colors.red}
+                  />
+                </div>
+                <div className={classes.tinyChart}>
+                <div
+                  className={classes.tinych}
+                  style={{ background: "rgba(250, 100, 0,.1)" }}
+                >
+                  <h3 style={{ color: colors.orange }}>active</h3>
+                  <Barchart
+                    data={this.state.casesTimeline}
+                    isLoading={this.state.isLoading}
+                    dataKey="totalactive"
+                    stroke={colors.orange}
+                  />
+                </div>
+              </div>
+              <div className={classes.tinyChart}>
+                <div
+                  className={classes.tinych}
+                  style={{ background: "rgba(28, 177, 66,.1)" }}
+                >
+                  <h3 style={{ color: colors.green }}>Recovered</h3>
+                  <Barchart
+                    data={this.state.casesTimeline}
+                    isLoading={this.state.isLoading}
+                    dataKey="totalrecovered"
+                    stroke={colors.green}
+                  />
+                </div>
+              </div>
+              <div className={classes.tinyChart}>
+                <div
+                  className={classes.tinych}
+                  style={{ background: "rgba(98, 54, 255,.1)" }}
+                >
+                  <h3 style={{ color: colors.purple }}>Deceased</h3>
+                  <Barchart
+                    data={this.state.casesTimeline}
+                    isLoading={this.state.isLoading}
+                    dataKey="totaldeceased"
+                    stroke={colors.purple}
+                  />
+                </div>
+              </div>
+              </div>
+
+
+              </div>
 
 
 
-            
+          </div>
+          <div className={classes.tableContainer}>
+            <h2 className={classes.tableHeading}>
+              State/UT Wise Data (Sortable){" "}
+            </h2>
+            <DisplayTable
+              tableData={data}
+              districtLevel={districtLevel}
+            //   isDarkMode={isDarkMode}
+            />
+          </div>
+
+
+
+
+
         </div>
-        
-
-              
-
             </>
         )
     }

@@ -15,7 +15,16 @@ const PROJECTION_CONFIG = {
 };
 
 const COLOR_RANGE = [
-  
+  "#ffedea",
+  "#ffcec5",
+  "#ffdec5",
+  "#ffad9f",
+  "#ff8a75",
+  "#ff5533",
+  "#e2492d",
+  "#be3d26",
+  "#9a311f",
+  "#782618",
 ];
 
 const DEFAULT_COLOR = "#EEE";
@@ -46,7 +55,16 @@ class Map extends Component {
     };
   }
 
-  
+  onMouseEnter = (geo, current = { value: "NA" }) => {
+    return () => {
+      this.setState(
+        {
+          tooltipContent: `${geo.properties.name}: ${current.value}`,
+        },
+        () => this.props.currentLocation(geo.properties.name)
+      );
+    };
+  };
 
   onMouseLeave = () => {
     this.setState({ tooltipContent: "" });
