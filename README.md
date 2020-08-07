@@ -15,7 +15,8 @@
 
 
 <p align="center">
-   **About The Project**
+
+**About The Project**
 
    ## India Wins Covid-19
 
@@ -32,17 +33,17 @@ Live Preview:
 - Font Awesome
 - CSS
 
-** To make the work easy, here i used predefined components from Material UI**
+**To make the work easy, here i used predefined components from Material UI**
 
 
 ## API's Used
 
-Website Source: https://covid19india.org/
+Website Source: https://covid19india.org/<br />
 
-Country Data: https://api.covid19india.org/data.json
-State Data: https://api.covid19india.org/states_daily.json
-District Data: https://api.covid19india.org/v2/state_district_wise.json
-Recent Updates: https://api.covid19india.org/updatelog/log.json
+Country Data: https://api.covid19india.org/data.json <br/>
+State Data: https://api.covid19india.org/states_daily.json <br/>
+District Data: https://api.covid19india.org/v2/state_district_wise.json <br/>
+Recent Updates: https://api.covid19india.org/updatelog/log.json <br/>
 
 
 

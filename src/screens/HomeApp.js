@@ -11,6 +11,7 @@ import stateCodes from "../constants/stateCodes";
 import styles from "../styles/HomeAppStyles"
 import { formatDistance } from "date-fns";
 import { withStyles } from "@material-ui/styles";
+import Overview from '../components/Overview'
 
 
 
@@ -211,6 +212,24 @@ class HomeApp extends Component {
             </div>
             {expanded && <div className={classes.update}>{displayUpdates}</div>}
           </div>
+          <div className="darkModeButton">
+            <label className="switch">
+              <input
+                type="checkbox"
+                // onChange={setDarkMode}
+                // checked={isDarkMode}
+              />
+              <span className="slider round"></span>
+            </label>
+          </div>
+
+          <div>
+          <Overview
+            // isDarkMode={isDarkMode}
+            data={this.state.todayData}
+            loadingStatus={this.loadingStatus}
+          />
+        </div>
 
 
 

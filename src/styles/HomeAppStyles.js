@@ -2,7 +2,11 @@ import colors from "../constants/colors";
 import sizes from "./sizes";
 
 export default {
-  
+  header: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 
   heading: {
     fontWeight: "500",
@@ -15,11 +19,6 @@ export default {
        props.isDarkMode? "#cccccc": "red",
       marginRight: "1rem",
     },
-    header: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      },
 
     [sizes.down("md")]: {
       fontSize: "2.8rem",
@@ -32,7 +31,10 @@ export default {
     },
   },
 
-  
+  updates: {
+    marginLeft: "auto",
+    position: "relative",
+  },
 
   notification: {
     fontSize: "3rem",
@@ -46,10 +48,6 @@ export default {
       transform: "scale(1.15)",
       color: ({ isDarkMode }) => (isDarkMode ? "rgba(255,255,255,.8)" : "#000"),
     },
-  },
-  updates: {
-    marginLeft: "auto",
-    position: "relative",
   },
 
   notificationBell: {
