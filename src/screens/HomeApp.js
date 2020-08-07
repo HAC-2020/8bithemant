@@ -1,7 +1,16 @@
 import React, { Component } from 'react'
+import {
+    faBell,
+    faBellSlash,
+    // faSyncAlt
+  } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import colors from "../constants/colors";
 import stateCodes from "../constants/stateCodes";
+import styles from "../styles/HomeAppStyles"
+import { formatDistance } from "date-fns";
+import { withStyles } from "@material-ui/styles";
 
 
 
@@ -24,7 +33,7 @@ const months = {
 
 
 
-export class HomeApp extends Component {
+class HomeApp extends Component {
     constructor(props) {
         super(props);
     
@@ -129,6 +138,7 @@ export class HomeApp extends Component {
     
 
     render() {
+        const { classes} = this.props;
         const {
             mapData,
             isLoading,
@@ -138,15 +148,79 @@ export class HomeApp extends Component {
             updates,
           } = this.state;
 
+
+          if (isLoading) {
+            return (
+              <div className={classes.loadingIcon}>
+                <div style={{"height":"500px", "width":"500"}}>Loading Your Data </div>
+                {/* <Lottie options={defaultOptions} height={500} width={500} /> */}
+              </div>
+            );
+          }
+          let displayUpdates;
+          try {
+            displayUpdates = updates
+              .slice(-5)
+              .reverse()
+              .map(({ update, timestamp }, i) => {
+                update = update.replace("\n", "<br/>");
+                return (
+                  <div className={classes.updateBox} key={i}>
+                    <h5 className={classes.updateHeading}>
+                      {`${formatDistance(
+                        new Date(timestamp * 1000),
+                        new Date()
+                      )} ago`}
+                    </h5>
+                    <h4
+                      className={classes.updateText}
+                      dangerouslySetInnerHTML={{
+                        __html: update,
+                      }}
+                    ></h4>
+                  </div>
+                );
+              });
+          } catch (err) { }
+
         return (
-            <div>
-               {this.formatDate(this.state.todayData.lastupdatedtime)} 
+            <>
+               <div className={classes.header}>
+                    <h1 className={classes.heading}>
+                    <span>Covid-19</span>
+                    </h1>
+                    <div className={classes.lastUpdatedTime}>
+            Last Updated:{" "}
+            {this.formatDate(this.state.todayData.lastupdatedtime)}
+          </div>
+          <div className={classes.updates}>
+            <div className={classes.notification}>
+              {expanded ? (
+                <FontAwesomeIcon
+                  icon={faBellSlash}
+                  onClick={this.handleNotification}
+                />
+              ) : (
+                  <div className={classes.notificationBell}>
+                    <FontAwesomeIcon
+                      icon={faBell}
+                      onClick={this.handleNotification}
+                    />
+                  </div>
+                )}
+            </div>
+            {expanded && <div className={classes.update}>{displayUpdates}</div>}
+          </div>
+
+
+
+               </div>
 
               
 
-            </div>
+            </>
         )
     }
 }
 
-export default HomeApp
+export default withStyles(styles)(HomeApp)
