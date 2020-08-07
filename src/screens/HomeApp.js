@@ -153,8 +153,7 @@ class HomeApp extends Component {
           if (isLoading) {
             return (
               <div className={classes.loadingIcon}>
-                <div style={{"height":"500px", "width":"500"}}>Loading Your Data </div>
-                {/* <Lottie options={defaultOptions} height={500} width={500} /> */}
+                <div style={{"fontSize":"50px"}}>Animals Life is Important, Save Human as well as Animals from Pandemic</div>
               </div>
             );
           }
@@ -230,9 +229,6 @@ class HomeApp extends Component {
             loadingStatus={this.loadingStatus}
           />
         </div>
-
-
-
                </div>
 
               
