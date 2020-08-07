@@ -1,5 +1,26 @@
 import React, { Component } from 'react'
 import axios from "axios";
+import colors from "../constants/colors";
+import stateCodes from "../constants/stateCodes";
+
+
+
+
+
+const months = {
+    "01": "Jan",
+    "02": "Feb",
+    "03": "Mar",
+    "04": "Apr",
+    "05": "May",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Aug",
+    "09": "Sep",
+    "10": "Oct",
+    "11": "Nov",
+    "12": "Dec",
+  };
 
 
 
@@ -108,9 +129,21 @@ export class HomeApp extends Component {
     
 
     render() {
+        const {
+            mapData,
+            isLoading,
+            data,
+            districtLevel,
+            expanded,
+            updates,
+          } = this.state;
+
         return (
             <div>
-                Hii this is the home screen
+               {this.formatDate(this.state.todayData.lastupdatedtime)} 
+
+              
+
             </div>
         )
     }
