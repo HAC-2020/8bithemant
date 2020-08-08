@@ -18,15 +18,23 @@ import Navbar from "./components/Navbar";
 
 class App extends Component {
   constructor(props) {
-    super(props);}
+    super(props);this.state = {
+      isDarkMode: true,
+    };
+    this.setDarkMode = this.setDarkMode.bind(this);
+  }
+  setDarkMode(e) {
+    this.setState({ isDarkMode: e.target.checked });
+  }
 
 
     render() {
+      const { isDarkMode } = this.state;
       return (
-        <Paper >
+        <Paper isDarkMode={this.state.isDarkMode}>
           <div className="root">
           <div className="navBar">
-            <Navbar  />
+            <Navbar isDarkMode={isDarkMode} />
           </div>
           <div className="mainContent">
             <Switch>
@@ -35,52 +43,54 @@ class App extends Component {
                 path="/"
                 render={()=>(
                   <HomeApp
+                  setDarkMode={this.setDarkMode}
+                    isDarkMode={this.state.isDarkMode}
                   />
                 )} />
                 <Route 
                 exact
                 path="/symptoms"
-                render={() => <Symptoms />}
+                render={() => <Symptoms isDarkMode={isDarkMode} />}
                 />
                 <Route
                 exact
                 path="/help"
-                render={()=> <Help />}
+                render={()=> <Help isDarkMode={isDarkMode}/>}
                 />
                 <Route
                   exact
                   path="/stay-safe"
-                  render={() => <StaySafe />}
+                  render={() => <StaySafe  isDarkMode={isDarkMode}/>}
                 />
                 <Route
               exact
               path="/stay-safe/keep-distance"
-              render={()=> <KeepDistance /> } 
+              render={()=> <KeepDistance isDarkMode={isDarkMode} /> } 
               />
               <Route
               exact
               path="/stay-safe/stay-home"
-              render={()=> <StayHome /> } 
+              render={()=> <StayHome isDarkMode={isDarkMode}/> } 
               />
               <Route
               exact
               path="/stay-safe/visit-doctor"
-              render={()=> <VisitDoctor /> } 
+              render={()=> <VisitDoctor isDarkMode={isDarkMode}/> } 
               />
               <Route
               exact
               path="/stay-safe/use-alcohol"
-              render={()=> <UseAlcohol /> } 
+              render={()=> <UseAlcohol isDarkMode={isDarkMode}/> } 
               />
               <Route
               exact
               path="/stay-safe/wear-mask"
-              render={()=> <WearMask /> } 
+              render={()=> <WearMask isDarkMode={isDarkMode} /> } 
               />
               <Route
               exact
               path="/stay-safe/wash"
-              render={()=> <Wash /> } 
+              render={()=> <Wash isDarkMode={isDarkMode}/> } 
               />
 
 
