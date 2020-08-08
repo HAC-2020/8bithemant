@@ -158,9 +158,9 @@ class HomeApp extends Component {
           if (isLoading) {
             return (
               <div className={classes.loadingIcon}>
-                <div> <div style={{"width":"100px", "height":"100px", "marginLeft":"200px"}} >  < img src={save} style={{"height":"200px", "width":"200px"}} />  </div>
-                <br />
-                 <div style={{"fontSize":"50px","color":"red"}}> Every Life On Earth Matters</div></div>
+                <div> <div style={{"width":"100px", "height":"100px", "marginLeft":"200px", "marginBottom":"30px"}} >  < img src={save} style={{"height":"200px", "width":"200px"}} />  </div>
+               
+                 <div style={{"fontSize":"50px","color":"red", "padding": "20px"}}>Every Life On Earth Matters</div></div>
               </div>
             );
           }
