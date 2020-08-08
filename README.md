@@ -1,21 +1,5 @@
 <p align="center">
 
-## Hii,
- ## I am Hemant Joshi 18 Years Old Javascript Developer
-<Br />
-
-#### My Skill Set Involve:
-- React
-- Redux
-- Context 
-- Express/ Node
-- MongoDB
-
-</p>
-
-
-<p align="center">
-
 **About The Project**
 
    ## India Wins Covid-19
