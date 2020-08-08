@@ -13,6 +13,7 @@ import WearMask from './screens/wearMask'
 import UseAlcohol from './screens/useAlcohol'
 import VisitDoctor from './screens/visitDoctor'
 import StayHome from './screens/stayHome'
+import Navbar from "./components/Navbar";
 
 
 class App extends Component {
@@ -23,6 +24,11 @@ class App extends Component {
     render() {
       return (
         <Paper >
+          <div className="root">
+          <div className="navBar">
+            <Navbar  />
+          </div>
+          <div className="mainContent">
             <Switch>
               <Route 
                 exact
@@ -80,8 +86,9 @@ class App extends Component {
 
 
             </Switch>
+            </div>
 
-
+            </div>
         </Paper>
 
 
