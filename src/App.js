@@ -6,7 +6,6 @@ import HomeApp from './screens/HomeApp'
 import Symptoms from "./screens/Symptoms";
 import Help from "./screens/Help";
 import StaySafe from "./screens/StaySafe";
-
 import KeepDistance from './screens/keepDistance'
 import Wash from './screens/wash'
 import WearMask from './screens/wearMask'
