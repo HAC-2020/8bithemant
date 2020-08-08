@@ -22,7 +22,9 @@ class StaySafe extends Component {
     const { classes, isDarkMode } = this.props;
     return (
       <div className={classes.staySafe}>
-        <h1>Stay Safe</h1>
+        <div style={{"fontSize":"100px"}} >Stay Safe</div>
+        <div style={{"fontSize":"40px"}} >Respect the Doctors and Workers who are working to Protect the World</div>
+        <div style={{"fontSize":"29px"}} > Every Life Matter, Feed Animals and Protect Lives.</div>
         <div className={classes.cardsBox}>
           {svgIcons.map((s, i) => (
          
