@@ -21,16 +21,6 @@ import save from '../static/Protect-Animals.png'
 import "../styles/DarkModeButton.css";
 
 
-// const defaultOptions = {
-//   loop: true,
-//   autoplay: true,
-//   animationData: animationData.default,
-//   rendererSettings: {
-//     preserveAspectRatio: "xMidYMid slice",
-//   },
-// };
-
-
 const months = {
     "01": "Jan",
     "02": "Feb",
@@ -45,8 +35,6 @@ const months = {
     "11": "Nov",
     "12": "Dec",
   };
-
-
 
 class HomeApp extends Component {
     constructor(props) {
@@ -64,8 +52,7 @@ class HomeApp extends Component {
     this.findId = this.findId.bind(this);
     this.handleFormat = this.handleFormat.bind(this);
     this.handleNotification = this.handleNotification.bind(this);
-
-    }
+  }
 
     componentDidMount() {
         this.fetchData();
@@ -245,8 +232,6 @@ class HomeApp extends Component {
             loadingStatus={this.loadingStatus}
           />
         </div>
-
-
         <div className={classes.content}>
         <div className={classes.contentArea}>
             <div className={classes.mapArea}>
@@ -257,10 +242,6 @@ class HomeApp extends Component {
               />
             </div>
           </div>
-
-          
-
-
           <div className={classes.tableContainer}>
             <h2 className={classes.tableHeading}>
               State/UT Wise Data (Sortable){" "}
@@ -331,10 +312,6 @@ class HomeApp extends Component {
               </div>
               </div>
               </div>
-
-
-
-
         </div>
         <Footer />
             </>

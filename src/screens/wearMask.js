@@ -24,12 +24,12 @@ class WearMask extends Component {
               <p>
               COVID-19 spreads mainly from person to person through respiratory droplets produced when an infected person coughs, sneezes, talks, or raises their voice (e.g., while shouting, chanting, or singing). These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into the lungs. Recent studies show that a significant portion of individuals with COVID-19 lack symptoms (are “asymptomatic”) and that even those who eventually develop symptoms (are “pre-symptomatic”) can transmit the virus to others before showing symptoms.
 
-To reduce the spread of COVID-19, CDC recommends that people wear masks in public settings when around people outside of their household, especially when other social distancing measures are difficult to maintain.
+            To reduce the spread of COVID-19, CDC recommends that people wear masks in public settings when around people outside of their household, especially when other social distancing measures are difficult to maintain.
               </p>
               <h2>Why it is important to wear a mask</h2>
               <p>Masks may help prevent people who have COVID-19 from spreading the virus to others. Wearing a mask will help protect people around you, including those at higher risk of severe illness from COVID-19 and workers who frequently come into close contact with other people (e.g., in stores and restaurants). Masks are most likely to reduce the spread of COVID-19 when they are widely used by people in public settings. The spread of COVID-19 can be reduced when masks are used along with other preventive measures, including social distancing, frequent handwashing, and cleaning and disinfecting frequently touched surfaces.
 
-The masks recommended here are not surgical masks or respirators. Currently, those are critical supplies that should be reserved for healthcare workers and other first responders. Masks are not personal protective equipment (PPE). They are not appropriate substitutes for PPE such as respirators (like N95 respirators) or medical facemasks (like surgical masks) in workplaces where respirators or facemasks are recommended or required to protect the wearer.</p>
+            The masks recommended here are not surgical masks or respirators. Currently, those are critical supplies that should be reserved for healthcare workers and other first responders. Masks are not personal protective equipment (PPE). They are not appropriate substitutes for PPE such as respirators (like N95 respirators) or medical facemasks (like surgical masks) in workplaces where respirators or facemasks are recommended or required to protect the wearer.</p>
             </div>
             <div className={classes.symptomsDiv}>
               <p>
@@ -97,7 +97,7 @@ The masks recommended here are not surgical masks or respirators. Currently, tho
           </div>
         </div>
         <div className={classes.footer}>
-          <Footer />
+        <Footer />
         </div>
       </div>
     );
