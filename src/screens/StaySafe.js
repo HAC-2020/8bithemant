@@ -31,7 +31,7 @@ class StaySafe extends Component {
               key={i}
               src={s.src}
               title={s.title}
-              isDarkMode={isDarkMode}
+              // isDarkMode={isDarkMode}
               
               
             />
