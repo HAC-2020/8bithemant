@@ -5,6 +5,7 @@ import {
     // faSyncAlt
   } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import * as animationData from "../static/loading.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import colors from "../constants/colors";
 import stateCodes from "../constants/stateCodes";
@@ -15,11 +16,19 @@ import Overview from '../components/Overview'
 import MapSection from '../components/MapSection'
 import Barchart from "../components/Barchart";
 import DisplayTable from "../components/DisplayTable"
-
+import Footer from '../components/Footer'
 import save from '../static/Protect-Animals.png'
+import "../styles/DarkModeButton.css";
 
 
-
+// const defaultOptions = {
+//   loop: true,
+//   autoplay: true,
+//   animationData: animationData.default,
+//   rendererSettings: {
+//     preserveAspectRatio: "xMidYMid slice",
+//   },
+// };
 
 
 const months = {
@@ -144,7 +153,7 @@ class HomeApp extends Component {
     
 
     render() {
-        const { classes} = this.props;
+        const { classes, setDarkMode, isDarkMode} = this.props;
         const {
             mapData,
             isLoading,
@@ -222,8 +231,8 @@ class HomeApp extends Component {
             <label className="switch">
               <input
                 type="checkbox"
-                // onChange={setDarkMode}
-                // checked={isDarkMode}
+                onChange={setDarkMode}
+                checked={isDarkMode}
               />
               <span className="slider round"></span>
             </label>
@@ -231,7 +240,7 @@ class HomeApp extends Component {
           </div>
         <div>
           <Overview
-            // isDarkMode={isDarkMode}
+            isDarkMode={isDarkMode}
             data={this.state.todayData}
             loadingStatus={this.loadingStatus}
           />
@@ -244,7 +253,7 @@ class HomeApp extends Component {
               <MapSection
                 data={data}
                 mapData={mapData}
-                // isDarkMode={isDarkMode}
+                isDarkMode={isDarkMode}
               />
             </div>
           </div>
@@ -321,7 +330,7 @@ class HomeApp extends Component {
             <DisplayTable
               tableData={data}
               districtLevel={districtLevel}
-            //   isDarkMode={isDarkMode}
+              isDarkMode={isDarkMode}
             />
           </div>
 
@@ -330,6 +339,7 @@ class HomeApp extends Component {
 
 
         </div>
+        <Footer />
             </>
         )
     }
