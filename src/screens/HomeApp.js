@@ -16,6 +16,8 @@ import MapSection from '../components/MapSection'
 import Barchart from "../components/Barchart";
 import DisplayTable from "../components/DisplayTable"
 
+import save from '../static/Protect-Animals.png'
+
 
 
 
@@ -156,7 +158,9 @@ class HomeApp extends Component {
           if (isLoading) {
             return (
               <div className={classes.loadingIcon}>
-                <div style={{"fontSize":"50px"}}>Animals Life is Important, Save Human as well as Animals from Pandemic</div>
+                <div> <div style={{"width":"100px", "height":"100px", "marginLeft":"200px", "marginBottom":"30px"}} >  < img src={save} style={{"height":"200px", "width":"200px"}} />  </div>
+               
+                 <div style={{"fontSize":"50px","color":"red", "padding": "20px"}}>Every Life On Earth Matters</div></div>
               </div>
             );
           }

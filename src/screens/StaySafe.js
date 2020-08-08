@@ -7,7 +7,7 @@ import Fourth from "../static/04.svg";
 import Fifth from "../static/05.svg";
 import Sixth from "../static/06.svg";
 import styles from "../styles/StaySafeStyles";
-import Cards from "./Cards";
+import Cards from "../components/Cards";
 
 class StaySafe extends Component {
   render() {

@@ -2,7 +2,7 @@ import { withStyles } from "@material-ui/styles";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/SymptomsStyles";
-import Footer from "./Footer";
+import Footer from "../components/Footer"
 
 class Wash extends Component {
   render() {
