@@ -24,9 +24,9 @@ class UseAlcohol extends Component {
               <p>
               Each day we hear about more people testing positive for COVID-19 in our county, the United States and throughout the world.
 
-The virus that causes COVID-19 can spread from person to person through droplets that are expelled into the air when an infected person coughs or sneezes. If you are nearby, these droplets can enter your body through the nose, mouth or lungs.
+              The virus that causes COVID-19 can spread from person to person through droplets that are expelled into the air when an infected person coughs or sneezes. If you are nearby, these droplets can enter your body through the nose, mouth or lungs.
 
-Recent studies suggest that COVID-19 may be spread by people who show no symptoms, according to the U.S. Centers for Disease Control and Prevention. That is why it is extremely important to take the necessary precautions to stop the spread of this virus.
+              Recent studies suggest that COVID-19 may be spread by people who show no symptoms, according to the U.S. Centers for Disease Control and Prevention. That is why it is extremely important to take the necessary precautions to stop the spread of this virus.
               </p>
             </div>
             <div className={classes.symptomsDiv}>
@@ -47,7 +47,7 @@ Recent studies suggest that COVID-19 may be spread by people who show no symptom
               <p>
               To slow the spread of COVID-19 to a manageable level for hospitals and healthcare providers, Gov. Tom Wolf recently extended a stay-at-home order to all Pennsylvanians through April 30.
 
-The stay-at-home-order asks Pennsylvanians to refrain from non-essential travel. Essential travel includes commuting to and from an essential job, picking up groceries and medicine and checking on family and pets in other households, according to the Pennsylvania Department of Health.
+              The stay-at-home-order asks Pennsylvanians to refrain from non-essential travel. Essential travel includes commuting to and from an essential job, picking up groceries and medicine and checking on family and pets in other households, according to the Pennsylvania Department of Health.
               </p>
               <h5 className={classes.symptomsHeading}>
               Social Distancing Precautions at Doylestown Health

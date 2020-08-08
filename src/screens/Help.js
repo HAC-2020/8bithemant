@@ -49,13 +49,13 @@ class Help extends Component {
     } catch (err) { }
   }
 
+   handleLoading() {
+    this.setState({ loadingStatus: "loading" });
+  }
   handleQuery(query) {
     this.setState({ query: query }, this.getData);
   }
-
-  handleLoading() {
-    this.setState({ loadingStatus: "loading" });
-  }
+  
 
   getData() {
     let resources = [];
@@ -73,6 +73,7 @@ class Help extends Component {
     this.setState({ currentResources: resources });
     setTimeout(() => this.setState({ loadingStatus: "completeLoading" }), 2000);
   }
+
 
   render() {
     const { classes } = this.props;

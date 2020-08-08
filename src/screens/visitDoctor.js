@@ -24,23 +24,23 @@ class VisitDoctor extends Component {
               <h2>When to see a doctor about COVID-19</h2>
               <p>
               Chances are you have lots of procedures in place to protect yourself from the novel coronavirus.
-<ul> 
-<li> You’re staying home except for truly essential errands, going for walks with plenty of distance between yourself and others.</li>
-<li>You know how to clean anything brought into the house and you’re giving soap and water a workout like never before.</li></ul><p>
-<br />But few of us have prepared for how we’ll react if we start feeling sick and suspect we have COVID-19, the disease caused by the virus. <br />
-</p>
-<br />
-<ul>
+            <ul> 
+            <li> You’re staying home except for truly essential errands, going for walks with plenty of distance between yourself and others.</li>
+            <li>You know how to clean anything brought into the house and you’re giving soap and water a workout like never before.</li></ul><p>
+            <br />But few of us have prepared for how we’ll react if we start feeling sick and suspect we have COVID-19, the disease caused by the virus. <br />
+            </p>
+            <br />
+        <ul>
 
-<li> At what point do I call a doctor?</li>
-<li>Should I head to an emergency room?</li>
- </ul>             </p>
+          <li> At what point do I call a doctor?</li>
+          <li>Should I head to an emergency room?</li>
+           </ul>             </p>
             </div>
             <div className={classes.symptomsDiv}>
               <h5 className={classes.symptomsHeading}>When to call a doctor</h5>
               <p>If you learn that you have been exposed to someone who has tested positive for the virus or who has become sick, stay inside and monitor yourself for any symptoms for the next 14 days, UCI Health infectious disease experts advise.
 
-Call your doctor's office if you develop the signature symptoms associated with COVID-19, including:</p>
+            Call your doctor's office if you develop the signature symptoms associated with COVID-19, including:</p>
               <ul className={classes.sympList}>
                 <li>Fever (above 100.4 Fahrenheit)</li>
                 <li>New cough</li>

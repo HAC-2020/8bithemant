@@ -94,7 +94,7 @@ class KeepDistance extends Component {
           </div>
         </div>
         <div className={classes.footer}>
-          <Footer />
+        <Footer />
         </div>
       </div>
     );
