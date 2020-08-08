@@ -258,6 +258,19 @@ class HomeApp extends Component {
             </div>
           </div>
 
+          
+
+
+          <div className={classes.tableContainer}>
+            <h2 className={classes.tableHeading}>
+              State/UT Wise Data (Sortable){" "}
+            </h2>
+            <DisplayTable
+              tableData={data}
+              districtLevel={districtLevel}
+              isDarkMode={isDarkMode}
+            />
+          </div>
           <div className={classes.chartArea}>
           <div className={classes.tinyChartArea}>
           <div className={classes.tinyChart}>
@@ -272,6 +285,7 @@ class HomeApp extends Component {
                     dataKey="totalconfirmed"
                     stroke={colors.red}
                   />
+                </div>
                 </div>
                 <div className={classes.tinyChart}>
                 <div
@@ -316,24 +330,7 @@ class HomeApp extends Component {
                 </div>
               </div>
               </div>
-
-
               </div>
-
-
-
-          </div>
-          <div className={classes.tableContainer}>
-            <h2 className={classes.tableHeading}>
-              State/UT Wise Data (Sortable){" "}
-            </h2>
-            <DisplayTable
-              tableData={data}
-              districtLevel={districtLevel}
-              isDarkMode={isDarkMode}
-            />
-          </div>
-
 
 
 

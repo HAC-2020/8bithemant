@@ -18,7 +18,7 @@ class Footer extends Component {
           Contribute on Github
         </a>
         <a
-          href="https://twitter.com/intent/tweet?text=Get the latest Covid-19 updates with Covid-19 India Tracker!&url=https://covidindiatracker.netlify.app/"
+          href="https://twitter.com/intent/tweet?text=Get the latest Covid-19 updates with Covid-19 India Tracker!&url=https://indiawinscovid.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
           className={classNames(classes.btn, classes.twitter)}

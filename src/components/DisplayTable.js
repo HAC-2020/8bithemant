@@ -112,8 +112,7 @@ const DisplayTable = ({ tableData, isDarkMode, districtLevel }) => {
   const [distId, setDistId] = useState("");
 
   const lightText = {
-      color:"rgba(255,255,255,.75)"
-    // color: isDarkMode && "rgba(255,255,255,.75)",
+    color: isDarkMode && "rgba(255,255,255,.75)",
   };
 
   const getClassNamesFor = (name) => {
